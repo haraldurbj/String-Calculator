@@ -25,8 +25,18 @@ public class CalculatorTest {
     	assertEquals(6, Calculator.add("1,2,3"));
     }
 
-		@Test
-	    public void testMultipleNumbersTwo(){
-	    	assertEquals(4, Calculator.add("1,1,1,1"));
-	    }		
+	@Test
+	  public void testMultipleNumbersTwo(){
+	  	assertEquals(4, Calculator.add("1,1,1,1"));
+	  }
+
+	@Test
+	  public void testNewLine(){
+	  	assertEquals(3, Calculator.add("1\n2"));
+	  }
+
+	@Test
+	  public void testNumbersAndNewline(){
+	  	assertEquals(6, Calculator.add("1\n2,3"));
+	  }
 }
